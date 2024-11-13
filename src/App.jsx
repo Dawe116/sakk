@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, NavLink, Routes, Route} from 'react-router-dom';
 import './App.css';
-import {ChessList} from './ChessList'
+import {ChessList} from './ChessList';
+import {ChessSingle} from './ChessSingle';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<ChessList />} />
+        <Route path="/chess/:chessId" element={<ChessSingle/>} />
       </Routes>
     </Router>
   );

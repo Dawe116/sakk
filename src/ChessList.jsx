@@ -26,9 +26,12 @@ export const ChessList = () => {
                                 <p className="text-danger">Születési éve: {chess.birth_date}</p>
                                 <p className="text-danger"> Megnyert világbajnokságai: {chess.wold_ch_won}</p>
                                 <div className="card-body">
-                                    <Link to={chess.profile_url} exact>Profil Link</Link><br/>
-                                    <img src={chess.image_url ? chess.image_url : "https://via.placeholder.com/400*800"} alt={chess.name} className="img-fluid" style={{width: "200px"}}  />
+
+                                    <Link to={chess.profile_url} >Profil Link</Link><br/>
+                                    <Link key="x" to ={"/chess/" + chess.id} >
+                                    <img src={chess.image_url ? chess.image_url : "https://via.placeholder.com/400*800"} alt={chess.name} className="img-fluid" style={{width: "200px"}}  /> </Link><br/>
                                 </div>
+                                <link to={"/chess-mod"}
                             </div>
                 ))}
             </div>
